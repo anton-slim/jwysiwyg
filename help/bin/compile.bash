@@ -60,7 +60,7 @@ case $1 in
 		fi
 
 		echo "Read config..."
-		while read path; do
+		while read -t i path; do
 			echo "+ Read $path..."
 			for filename in $(find $JWYSIWYG_ROOT_DIR/$path); do
 				jwysiwyg_title $filename $outfile
